@@ -3,9 +3,11 @@
 
 import sys
 import time
+import chess # https://github.com/niklasf/python-chess
 from control import cmain
 
 line = None # save the move line for go
+board = None
 
 def quit(clist):
   sys.exit()
@@ -19,7 +21,9 @@ def isready(clist): #sync engine + gui
   print("readyok")
 
 def ucinewgame(clist): # init engine. No answer required
-  print("### pyedlchess initialized")
+  global board 
+  board = chess.Board()
+  print(">>> pyedlchess initialized")
 
 def position(clist): # position startpos moves e2e4 e7e5 | position startpos | position fen 'fen'
   global line 
@@ -30,10 +34,10 @@ def position(clist): # position startpos moves e2e4 e7e5 | position startpos | p
       clist.pop(0) # remove moves
     line = clist
   else: # must be fen then
-    print("### fen not yet implemented!")    
+    print(">>> fen not yet implemented!")    
 
 def go(clist): # pass [timestamp, line, goargs=clist] 
-  mytup = time.time(), line, clist
+  mytup = board, time.time(), line, clist
   cmain(mytup)
 
 commands = { # implemented
@@ -53,7 +57,7 @@ while uinput != "quit": # main UCI loop
   cmd = clist.pop(0)
   result = commands.get(cmd, "empty")
   if result == "empty":
-    print("### invalid command")
+    print(">>> invalid command")
   else: 
     result(clist)
 
