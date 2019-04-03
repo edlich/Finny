@@ -12,7 +12,8 @@ def cmain(tuple): # board, 1462484917.8764188, ['c2c4', 'c7c5'],['depth', '4']
   line = tuple[2]
   goparams = tuple[3]
 
-  board.push(chess.Move.from_uci(line[-1]))
+  if len(line)> 0: # Check if Finny has white in startpos because line = []
+    board.push(chess.Move.from_uci(line[-1]))
   print(board)
   print("-------------------\n")
 
