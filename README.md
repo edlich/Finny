@@ -1,2 +1,3 @@
 # Finny2
-Lichess UCI Chess Bot based on the PythonChess lib
+UCI Chess Program based on the PythonChess lib.
+Next Step: Wrap it as a LichessBot.
