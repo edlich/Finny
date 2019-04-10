@@ -4,7 +4,7 @@
 import sys
 import time
 import chess # https://github.com/niklasf/python-chess
-from control import cmain
+from control import controller
 
 line = None # save the move line for go
 board = None
@@ -13,9 +13,8 @@ def quit(clist):
   sys.exit()
 
 def uci(clist):
-  print("id name FINNY")
+  print("id name FINNY 0.1")
   print("id author Stefan Edlich")
-  print("id")
 
 def isready(clist): #sync engine + gui
   print("readyok")
@@ -23,7 +22,7 @@ def isready(clist): #sync engine + gui
 def ucinewgame(clist): # init engine. No answer required
   global board 
   board = chess.Board()
-  print(">>> pyedlchess initialized")
+  print(">>> finny initialized")
 
 def position(clist): # position startpos moves e2e4 e7e5 | position startpos | position fen 'fen'
   global line 
@@ -38,7 +37,7 @@ def position(clist): # position startpos moves e2e4 e7e5 | position startpos | p
 
 def go(clist): # pass [timestamp, line, goargs=clist] 
   mytup = board, time.time(), line, clist
-  cmain(mytup)
+  controller(mytup)
 
 commands = { # implemented
 		"quit" : quit,
