@@ -12,6 +12,6 @@
 
 # Executable Windows Versions (.exe)
 
-**finny-0.1**: DOWNLOAD() (security MD5 [hash](https://www.pelock.com/products/hash-calculator): *80A501ED5BCC118C01175C2781AFAB2F*)
+**finny-0.1**: [DOWNLOAD](https://drive.google.com/file/d/1tdORyO8_aew2cL9--ibZtrl-nrFwpNQA/view?usp=sharing) (security MD5 [hash](https://www.pelock.com/products/hash-calculator): *9D8E8781893EBD9B2DA60BF46B311280*)
 
 Only plays Random Moves. Stockfish 10 needs 13 monves average to mate it. Can you be as fast as Stockfish?
