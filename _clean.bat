@@ -1,5 +1,6 @@
-rm dist\finny.exe
-rm dist
-rm finny.spec
+del dist\finny.exe
+del dist
+del build
+del finny.spec
 ECHO Fertig!
 timeout 3
