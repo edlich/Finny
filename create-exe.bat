@@ -1,1 +1,0 @@
-pyinstaller --onefile ..\src\finny.py
