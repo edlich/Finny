@@ -15,6 +15,7 @@ def quit(clist):
 def uci(clist):
   print("id name FINNY 0.1")
   print("id author Stefan Edlich")
+  print("uciok") ## do not forget!!
 
 def isready(clist): #sync engine + gui
   print("readyok")
