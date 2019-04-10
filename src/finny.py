@@ -13,9 +13,9 @@ def quit(clist):
   sys.exit()
 
 def uci(clist):
-  print("id name FINNY 0.1")
-  print("id author Stefan Edlich")
-  print("uciok") ## do not forget!!
+  print("id name FINNY 0.1") # Command 1/3 real version number!
+  print("id author Stefan Edlich") # Command 2/3
+  print("uciok") ## do not forget!! # Command 3/3
 
 def isready(clist): #sync engine + gui
   print("readyok")
