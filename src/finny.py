@@ -52,7 +52,7 @@ commands = { # implemented
 uinput = "empty"
 
 while uinput != "quit": # main UCI loop
-  uinput = input()
+  uinput = input() # Sonarqube sees security issue here. Check input.
   clist = uinput.split(" ")
   cmd = clist.pop(0)
   result = commands.get(cmd, "empty")
